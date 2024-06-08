@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+    <!-- with border  -->
+    
+    <!-- border @rows  -->
+    <h4>with rowspan attribute
+        About: specifies the no.of rows that should be spanned
+    </h4>
+    <table border="5" rules="all">
+        <caption>MONTHLY SAVINGS</caption>
+        <tr>
+            <th>Month</th>
+            <th>Savings</th>
+            <td rowspan="3">Savings for Holiday!</td>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td>February</td>
+            <td>12000</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
+
+
+<!--
+    Tables - logical representation of data in rows and columns
+    It consists of 
+    1. Caption   --- indicates the heading of the table
+    2. Table header -- indicates the columns of the table
+    3. Table body -- indicates the data inserted in the table
+    use <th></th> tag to highlight the columns
+    use <tr></tr> tag to create the rows
+    use <td></td> tag to insert the records in the table
+-->
