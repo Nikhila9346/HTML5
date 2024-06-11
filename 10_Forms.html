@@ -7,6 +7,7 @@
 </head>
 <body>
     <form>
+        <fieldset>
         <label for="name">Name:</label>
         <input id="name" type="text">
         <br><br>
@@ -21,36 +22,63 @@
         <br><br>
         <label for="dob">DOB:</label>
         <input type="datetime" id="dob">
+        <!--
+            <input type="week">
+            <input type="time">
+            <input type="month">
+        -->
         <br><br>
         <label for="gender">Gender:</label>
-        <input type="radio" id="male">
+        <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label>
-        <input type="radio" id="female">
+        <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label>
-        <input type="radio" id="others">
+        <input type="radio" id="others" name="gender" value="others">
         <label for="others">Others</label>
         <br><br>
         <label for="skills">Skills:</label>
-        <input type="checkbox" id="html">
+        <input type="checkbox" id="html" name="skills" value="html">
         <label for="html">HTML</label>
-        <input type="checkbox" id="css">
+        <input type="checkbox" id="css" name="skills" value="css">
         <label for="css">CSS</label>
-        <input type="checkbox" id="js">
+        <input type="checkbox" id="js" name="skills" value="js">
         <label for="js">JS</label>
-        <input type="checkbox" id="react">
+        <input type="checkbox" id="react" name="skills" value="react">
         <label for="react">React</label>
         <br><br>
         <label for="country">Country:</label>
-        <input type="" id="country">
+        <select>
+            <option value="">--Select Country--</option>
+            <option value="argentina">Argentina</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+        </select>
         <br><br>
         <label for="feedback">Feedback:</label>
-        <input type="" id="feedback">
+        <textarea id="feedback" cols="20" rows="5"></textarea>
         <br><br>
         <label for="upload">Upload:</label>
         <input type="file" id="upload">
         <br><br>
         <button>REGISTER</button>
+        <br><br>
+        <!-- BUTTON ALTERNATES
+            <input type="submit">
+            <input type="button" value="SIGNUP"> 
+            <input type="reset">
+         -->
+        <!--  COLOR 
+         <input type="color">  
+        -->
+        
+        <!-- 
+        <input type="range">
+        <input type="search">
+        <input type="url"> -->
+        
+        
 
+    </fieldset>
     </form>
 </body>
 </html>
@@ -69,4 +97,20 @@ Instead of type="datetime-local" - It will give you the calendar and time to sel
 If you want to select only one option from multiple options use - type="radio"
 
 If you want to select one or more options from multiple options then use - type="checkbox"
+
+If you want to create a button to submit the form without using <button></button> tag use - type="submit" (or) type="button" (or) type="reset" 
+
+If you want to know the RGB values use - type="color"
+
+If you want to know the type="month" - to select month, year
+
+If you want to display volume increase or decrease use type="range"
+
+If you want a search bar use type="search" (when you enter any text, it will also display the 'x' button on the right side of the search bar)
+
+If you want to display only the time then go with type="time"
+
+If you want to accept any url use type="url"
+
+If you want to specify week number of a year use type="week" (displays week number aswellas the year)
 -->
