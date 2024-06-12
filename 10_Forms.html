@@ -6,22 +6,23 @@
     <title>Forms</title>
 </head>
 <body>
-    <form>
+    <form autocomplete="off" novalidate>
         <fieldset>
+        <legend>STUDENT REGISTRATION FORM</legend>
         <label for="name">Name:</label>
-        <input id="name" type="text">
+        <input id="name" type="text" placeholder="Enter your Name" autofocus required>
         <br><br>
         <label for="email">Email:</label>
-        <input type="email" id="email">
+        <input type="email" id="email"placeholder="abc@gmail.com" required>
         <br><br>
         <label for="password">Password:</label>
-        <input type="password" id="password">
+        <input type="password" id="password" placeholder="should contain [A-Z, a-z, 0-9] and special characters" required>
         <br><br>
         <label for="mobile">Ph No:</label>
-        <input type="tel" id="mobile">
+        <input type="tel" id="mobile" placeholder="9876543210" maxlength="10" required>
         <br><br>
         <label for="dob">DOB:</label>
-        <input type="datetime" id="dob">
+        <input type="datetime" id="dob" value="01-01-2002" readonly>
         <!--
             <input type="week">
             <input type="time">
@@ -31,19 +32,19 @@
         <label for="gender">Gender:</label>
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female">
+        <input type="radio" id="female" name="gender" value="female" checked>
         <label for="female">Female</label>
         <input type="radio" id="others" name="gender" value="others">
         <label for="others">Others</label>
         <br><br>
         <label for="skills">Skills:</label>
-        <input type="checkbox" id="html" name="skills" value="html">
+        <input type="checkbox" id="html" name="skills" value="html" checked>
         <label for="html">HTML</label>
         <input type="checkbox" id="css" name="skills" value="css">
         <label for="css">CSS</label>
-        <input type="checkbox" id="js" name="skills" value="js">
+        <input type="checkbox" id="js" name="skills" value="js" disabled>
         <label for="js">JS</label>
-        <input type="checkbox" id="react" name="skills" value="react">
+        <input type="checkbox" id="react" name="skills" value="react" disabled>
         <label for="react">React</label>
         <br><br>
         <label for="country">Country:</label>
@@ -55,7 +56,7 @@
         </select>
         <br><br>
         <label for="feedback">Feedback:</label>
-        <textarea id="feedback" cols="20" rows="5"></textarea>
+        <textarea id="feedback" cols="20" rows="5" placeholder="Any suggestions"></textarea>
         <br><br>
         <label for="upload">Upload:</label>
         <input type="file" id="upload">
@@ -113,4 +114,20 @@ If you want to display only the time then go with type="time"
 If you want to accept any url use type="url"
 
 If you want to specify week number of a year use type="week" (displays week number aswellas the year)
+
+Additional Attributes to validate data:
+
+1. required - makes the input field mandatory for the user
+2. paceholder = "Additional info" - provides the additional information about the input field
+3. autofocus - When the page loads, it highlights the input field
+4. disabled - It will not allow the user to select the field, though it is visible
+5. value = "Some info" - Automatically add the data to the field, if the user enters the data then it will replace it with that data
+6. readonly - Doesn't allow the user to modify the data is present in input field
+7. checked - Automatically selects those options when the page is loaded for radio button and check box
+8. maxlength - to restrict the length to the specified value
+
+Attributes that are passed in <form></form> tag:
+
+1. autocomplete = "on/off" - on(by default), off it means it will not show any suggestions
+2. novalidate - even if you give validations, it will not give if you mention novalidate
 -->
